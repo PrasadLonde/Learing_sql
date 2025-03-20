@@ -1,0 +1,60 @@
+create database employees;
+use employees;
+select * from employees_info;
+
+RENAME table employees_info to emp;
+
+select * from emp WHERE city = 'DELHI'
+
+limit 6;
+
+-------- to chang e the data type of column
+
+alter table emp modify city varchar(50);
+--pattern matching
+SELECT 
+    *
+FROM
+    emp
+WHERE
+    name LIKE '%r';
+    
+    -- emp with surname GUPTA
+    
+    SELECT 
+    *
+FROM
+    emp
+WHERE
+    name LIKE '%GUPTA';
+    
+    -- emp where name is 4 letters
+    
+ SELECT 
+    *
+FROM
+    emp
+WHERE
+    name LIKE '____ %';
+    
+    -- emp where in the name m
+    select * from emp where name like '%m%';
+    
+    -- emp with 'm' in the name at 3rd place
+    
+        select * from emp where name like '__m%';
+        
+        
+        SELECT 
+    *
+FROM
+    emp
+WHERE
+    name LIKE '__________';
+    
+    select * from emp where city = 'pune';
+    
+    select * from emp where name = '__m%';
+    select * from emp where name like '__m%';
+    
+    select * from emp where city like 'pune';
